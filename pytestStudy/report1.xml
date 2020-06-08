@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="2" hostname="DESKTOP-G4JAMM0" name="pytest" skipped="0" tests="4" time="0.028" timestamp="2020-06-04T16:26:42.128683"><testcase classname="test_math_operation" file="test_math_operation.py" line="7" name="test_eval[3+5-8]" time="0.001"></testcase><testcase classname="test_math_operation" file="test_math_operation.py" line="7" name="test_eval[2+4-6]" time="0.001"></testcase><testcase classname="test_math_operation" file="test_math_operation.py" line="7" name="test_eval[2+4-4]" time="0.000"><failure message="AssertionError: assert 6 == 4
+ +  where 6 = eval(&apos;2+4&apos;)">test_input = &apos;2+4&apos;, expected = 4
+
+    @pytest.mark.parametrize(&quot;test_input,expected&quot;, [
+        (&quot;3+5&quot;, 8),
+        (&quot;2+4&quot;, 6),
+        (&quot;2+4&quot;, 4),
+        (&quot;6*9&quot;, 42),
+    ])
+    def test_eval(test_input, expected):
+&gt;       assert eval(test_input) == expected
+E       AssertionError: assert 6 == 4
+E        +  where 6 = eval(&apos;2+4&apos;)
+
+test_math_operation.py:15: AssertionError</failure></testcase><testcase classname="test_math_operation" file="test_math_operation.py" line="7" name="test_eval[6*9-42]" time="0.000"><failure message="AssertionError: assert 54 == 42
+ +  where 54 = eval(&apos;6*9&apos;)">test_input = &apos;6*9&apos;, expected = 42
+
+    @pytest.mark.parametrize(&quot;test_input,expected&quot;, [
+        (&quot;3+5&quot;, 8),
+        (&quot;2+4&quot;, 6),
+        (&quot;2+4&quot;, 4),
+        (&quot;6*9&quot;, 42),
+    ])
+    def test_eval(test_input, expected):
+&gt;       assert eval(test_input) == expected
+E       AssertionError: assert 54 == 42
+E        +  where 54 = eval(&apos;6*9&apos;)
+
+test_math_operation.py:15: AssertionError</failure></testcase></testsuite></testsuites>
