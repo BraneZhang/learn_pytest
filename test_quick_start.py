@@ -10,4 +10,4 @@ def test_reverse():
     assert reverse(string) == "doog"
 
     another_string = "itest"
-    assert reverse(another_string) == "tseti"
+    assert reverse(another_string) == "tsetii"
