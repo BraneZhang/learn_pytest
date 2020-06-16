@@ -5,7 +5,7 @@ import pytest
 
 
 # 函数式(不在类中的用例)
-
+# setup_function/teardown_function 每个用例开始和结束调用一次
 
 def setup_function():
     print("setup_function：每个用例开始前都会执行")
@@ -37,5 +37,6 @@ def test_three():
 if __name__ == "__main__":
     # -s 参数是为了显示用例的打印信息. -q 参数只显示结果，不显示过程
     # pytest.main()
-    pytest.main(["-s", "test_function.py"])
-    # pytest.main(["-s", '-q', "test_function.py"])
+    # pytest.main(["-s", "test_fixt01.py"])
+    pytest.main(["--html=./report/report1.html"])
+    # pytest.main(["-s", '-q', "test_fixt01.py"])
