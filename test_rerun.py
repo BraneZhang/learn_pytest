@@ -5,9 +5,15 @@ import pytest
 
 class TestRerun():
 
-    @pytest.mark.flaky(reruns=1)
-    @pytest.mark.parametrize('val',[
-        8,10
-    ])
-    def test_num(self, val):
-        assert val == 16
+    def reverse(self, string):
+        return string[::-1]
+
+    def test_reverse(self):
+        string = "good"
+        assert self.reverse(string) == "doog"
+
+        another_string = "itest"
+        assert self.reverse(another_string) == "tsetii"
+
+    def test_equal(self):
+        assert 2 == 2
